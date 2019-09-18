@@ -6,7 +6,7 @@ namespace Quantum_Leap_Zack_Taylor.LeapComponents
 {
     class Budget
     {
-        private int _budget { get; set; }
+        private int _budget;
 
         public Budget()
         {
@@ -21,6 +21,7 @@ namespace Quantum_Leap_Zack_Taylor.LeapComponents
             }
             else
             {
+                _budget -= 1000;
                 return true;
             }
         }
