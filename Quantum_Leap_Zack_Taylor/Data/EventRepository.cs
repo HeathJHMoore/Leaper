@@ -8,11 +8,6 @@ namespace Quantum_Leap_Zack_Taylor.Data
     class EventRepository
     {
         static List<Event> _listOfEvents = new List<Event>();
-
-        public List<Event> GetAll()
-        {
-            return _listOfEvents;
-        }
         
         public void Add(Event eventToAdd)
         {
