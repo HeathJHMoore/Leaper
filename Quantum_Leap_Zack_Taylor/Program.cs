@@ -9,7 +9,9 @@ namespace Quantum_Leap_Zack_Taylor
         {
             var eventRepository = new EventRepository();
             eventRepository.PopulateEvents();
-            Console.WriteLine("Hello World!");
+
+            var hostRepository = new HostRepository();
+            hostRepository.CreateSeedDataHosts();
         }
     }
 }

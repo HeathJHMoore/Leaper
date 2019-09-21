@@ -11,18 +11,18 @@ namespace Quantum_Leap_Zack_Taylor.Data
 
         public static List<Leap> ListOfLeaps = new List<Leap>();
 
-        public void TakeALeap(Leaper currentLeaper)
+        public void TakeALeap(Leaper currentLeaper, HostRepository hostRepository, EventRepository eventRepository)
         {
-            var newLeap = CreateALeap(currentLeaper);
+            var newLeap = CreateALeap(currentLeaper, hostRepository, eventRepository);
 
             ListOfLeaps.Add(newLeap);
         }
 
-        public Leap CreateALeap(Leaper currentLeaper)
+        public Leap CreateALeap(Leaper currentLeaper, HostRepository hostRepository, EventRepository eventRepository)
         {
-
-            var createdLeap = new Leap (currentLeaper, GetRandomHost(), GetRandomEvent());
-
+            var newHost = hostRepository.GetRandomHost();
+            var newEvent = eventRepository.GetRandomEvent();
+            var createdLeap = new Leap(currentLeaper, newHost, newEvent);
             return createdLeap;
         }
 
