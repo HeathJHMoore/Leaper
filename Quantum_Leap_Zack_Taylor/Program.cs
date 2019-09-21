@@ -52,7 +52,20 @@ namespace Quantum_Leap_Zack_Taylor
                 // get history
                 if (action == "get history")
                 {
+                    var leapHistory = leapRepository.GetLeapHistory(currentLeaper);
+                    int leapCounter = 1;
+                    
+                    foreach (var leap in leapHistory)
+                    {
+                        Console.WriteLine(leapCounter);
+                        Console.WriteLine($"Location: {leap.Event.Location}");
+                        Console.WriteLine($"Date: {leap.Event.Date.ToString("MM/dd/yyyy")}");
+                        Console.WriteLine($"Leaper: {leap.Leaper.Name}");
+                        Console.WriteLine($"Host: {leap.Host.Name}");
+                        Console.WriteLine("");
 
+                        leapCounter++;
+                    }
                 }
             } while (action != "exit");
         }
