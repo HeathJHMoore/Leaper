@@ -29,9 +29,16 @@ namespace Quantum_Leap_Zack_Taylor
                 // leap
                 if (action == "leap")
                 {
-                    leapRepository.TakeALeap(currentLeaper, hostRepository, eventRepository );
-                    var newLeapComplete = leapRepository.ReturnLastLeap();
-                    Console.WriteLine($"Leap complete. You were hosted by {newLeapComplete.Host.Name} and you went to {newLeapComplete.Event.Location}.");
+                   if (budget.CheckBudget())
+                   {
+                        leapRepository.TakeALeap(currentLeaper, hostRepository, eventRepository);
+                        var newLeapComplete = leapRepository.ReturnLastLeap();
+                        Console.WriteLine($"Leap complete. You were hosted by " +
+                            $"{newLeapComplete.Host.Name} and you went to {newLeapComplete.Event.Location}.");
+                   } else
+                   {
+                        Console.WriteLine($"You need to add funds.");
+                   }
 
                 }
 
