@@ -18,6 +18,12 @@ namespace Quantum_Leap_Zack_Taylor.Data
             ListOfLeaps.Add(newLeap);
         }
 
+        public Leap ReturnLastLeap()
+        {
+            var lastLeap = ListOfLeaps.Last();
+            return lastLeap;
+        }
+
         private Leap CreateALeap(Leaper currentLeaper, HostRepository hostRepository, EventRepository eventRepository)
         {
             var createdLeap = new Leap(currentLeaper, hostRepository.GetRandomHost() , eventRepository.GetRandomEvent());
