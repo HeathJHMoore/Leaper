@@ -9,7 +9,7 @@ namespace Quantum_Leap_Zack_Taylor.Data
     {
         static List<Event> _listOfEvents = new List<Event>();
         
-        public void Add(Event eventToAdd)
+        private void Add(Event eventToAdd)
         {
             eventToAdd.Id = Guid.NewGuid();
             eventToAdd.Date = new DateTime();
@@ -17,7 +17,7 @@ namespace Quantum_Leap_Zack_Taylor.Data
             _listOfEvents.Add(eventToAdd);
         }
 
-        public void Remove(Event eventToRemove)
+        private void Remove(Event eventToRemove)
         {
             _listOfEvents.Remove(eventToRemove);
         }
