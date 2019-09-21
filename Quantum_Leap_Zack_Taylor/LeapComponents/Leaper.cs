@@ -14,5 +14,6 @@ namespace Quantum_Leap_Zack_Taylor.LeapComponents
             Id = Guid.NewGuid();
             Name = name;
         }
+
     }
 }
