@@ -26,7 +26,7 @@ namespace Quantum_Leap_Zack_Taylor.Data
 
         public IEnumerable<Leap> GetLeapHistory(Leaper currentLeaper)
         {
-            var filteredList = ListOfLeaps.Where(x => x.Leaper.Name == currentLeaper.Name);
+            var filteredList = ListOfLeaps.Where(x => x.Leaper.Id == currentLeaper.Id);
             return filteredList;
         }
 

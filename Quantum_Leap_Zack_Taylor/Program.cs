@@ -1,4 +1,5 @@
 ﻿using Quantum_Leap_Zack_Taylor.Data;
+using Quantum_Leap_Zack_Taylor.LeapComponents;
 using System;
 
 namespace Quantum_Leap_Zack_Taylor
@@ -12,6 +13,8 @@ namespace Quantum_Leap_Zack_Taylor
 
             var hostRepository = new HostRepository();
             hostRepository.CreateSeedDataHosts();
+
+            var currentLeaper = new Leaper("Zack Taylor");
         }
     }
 }
