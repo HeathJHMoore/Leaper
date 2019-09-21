@@ -20,9 +20,7 @@ namespace Quantum_Leap_Zack_Taylor.Data
 
         public Leap CreateALeap(Leaper currentLeaper, HostRepository hostRepository, EventRepository eventRepository)
         {
-            var newHost = hostRepository.GetRandomHost();
-            var newEvent = eventRepository.GetRandomEvent();
-            var createdLeap = new Leap(currentLeaper, newHost, newEvent);
+            var createdLeap = new Leap(currentLeaper, hostRepository.GetRandomHost() , eventRepository.GetRandomEvent());
             return createdLeap;
         }
 
