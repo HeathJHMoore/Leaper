@@ -34,6 +34,7 @@ namespace Quantum_Leap_Zack_Taylor
                 if (action == "fund")
                 {
                     budget.AddFunds();
+                    Console.WriteLine("You added $3000 to your budget");
                 }
 
                 // get history
