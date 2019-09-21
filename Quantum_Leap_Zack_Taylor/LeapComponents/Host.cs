@@ -10,11 +10,6 @@ namespace Quantum_Leap_Zack_Taylor.LeapComponents
 
         public string Name { get; set; }
 
-        public Host(string name)
-        {
-            Id = Guid.NewGuid();
-            Name = name;
-        }
-        
+               
     }
 }
