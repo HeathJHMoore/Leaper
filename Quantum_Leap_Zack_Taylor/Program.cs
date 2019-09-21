@@ -8,6 +8,8 @@ namespace Quantum_Leap_Zack_Taylor
     {
         static void Main(string[] args)
         {
+            var budget = new Budget();
+
             var eventRepository = new EventRepository();
             eventRepository.PopulateEvents();
 
@@ -31,7 +33,7 @@ namespace Quantum_Leap_Zack_Taylor
                 // fund
                 if (action == "fund")
                 {
-
+                    budget.AddFunds();
                 }
 
                 // get history
