@@ -15,6 +15,31 @@ namespace Quantum_Leap_Zack_Taylor
             hostRepository.CreateSeedDataHosts();
 
             var currentLeaper = new Leaper("Zack Taylor");
+
+            var action = "";
+
+            do
+            {
+                Console.WriteLine("What do you want to do? [leap/fund/get history/exit]");
+                action = Console.ReadLine();
+                // leap
+                if (action == "leap")
+                {
+
+                }
+
+                // fund
+                if (action == "fund")
+                {
+
+                }
+
+                // get history
+                if (action == "get history")
+                {
+
+                }
+            } while (action != "exit");
         }
     }
 }
