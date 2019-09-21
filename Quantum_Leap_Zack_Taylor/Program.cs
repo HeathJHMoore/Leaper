@@ -59,7 +59,7 @@ namespace Quantum_Leap_Zack_Taylor
                     {
                         Console.WriteLine(leapCounter);
                         Console.WriteLine($"Location: {leap.Event.Location}");
-                        Console.WriteLine($"Date: {leap.Event.Date}");
+                        Console.WriteLine($"Date: {leap.Event.Date.ToString("MM/dd/yyyy")}");
                         Console.WriteLine($"Leaper: {leap.Leaper.Name}");
                         Console.WriteLine($"Host: {leap.Host.Name}");
                         Console.WriteLine("");
