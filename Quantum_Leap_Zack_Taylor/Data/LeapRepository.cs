@@ -9,18 +9,18 @@ namespace Quantum_Leap_Zack_Taylor.Data
     class LeapRepository
     {
 
-        public static List<Leap> ListOfLeaps = new List<Leap>();
+        static List<Leap> _listOfLeaps = new List<Leap>();
 
         public void TakeALeap(Leaper currentLeaper, HostRepository hostRepository, EventRepository eventRepository)
         {
             var newLeap = CreateALeap(currentLeaper, hostRepository, eventRepository);
 
-            ListOfLeaps.Add(newLeap);
+            _listOfLeaps.Add(newLeap);
         }
 
         public Leap ReturnLastLeap()
         {
-            var lastLeap = ListOfLeaps.Last();
+            var lastLeap = _listOfLeaps.Last();
             return lastLeap;
         }
 
@@ -32,7 +32,7 @@ namespace Quantum_Leap_Zack_Taylor.Data
 
         public IEnumerable<Leap> GetLeapHistory(Leaper currentLeaper)
         {
-            var filteredList = ListOfLeaps.Where(x => x.Leaper.Id == currentLeaper.Id);
+            var filteredList = _listOfLeaps.Where(x => x.Leaper.Id == currentLeaper.Id);
             return filteredList;
         }
 

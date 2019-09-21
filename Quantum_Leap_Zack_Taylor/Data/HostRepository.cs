@@ -10,7 +10,7 @@ namespace Quantum_Leap_Zack_Taylor.Data
     {
         static List<Host> _hosts = new List<Host>();
 
-        public void Add(Host hostToBeAdded)
+        private void Add(Host hostToBeAdded)
         {
             hostToBeAdded.Id = Guid.NewGuid();
             _hosts.Add(hostToBeAdded);            
