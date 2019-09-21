@@ -26,42 +26,39 @@ namespace Quantum_Leap_Zack_Taylor.Data
 
         public void CreateSeedDataHosts()
         {
-            var hostRepository = new HostRepository();
-
             var newHost1 = new Host
             {
                 Name = "Billy the Kid",
             };
 
-            hostRepository.Add(newHost1);
+            _hosts.Add(newHost1);
 
             var newHost2 = new Host
             {
                 Name = "Ludwig Von Beethoven",
             };
 
-            hostRepository.Add(newHost2);
+            _hosts.Add(newHost2);
 
             var newHost3 = new Host
             {
                 Name = "Napoleon Bonaparte",
             };
 
-            hostRepository.Add(newHost3);
+            _hosts.Add(newHost3);
 
             var newHost4 = new Host
             {
-                Name = "John Wilkes Booth",
+                Name = "Abraham Lincoln",
             };
 
-            hostRepository.Add(newHost4);
+            _hosts.Add(newHost4);
 
             var newHost5 = new Host
             {
                 Name = "Joan of Arc",
             };
-
-            hostRepository.Add(newHost5);
+            _hosts.Add(newHost5);
         }
         
         public List<Host> GetAllHosts()
