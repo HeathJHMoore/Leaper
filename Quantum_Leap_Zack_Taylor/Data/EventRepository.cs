@@ -24,8 +24,46 @@ namespace Quantum_Leap_Zack_Taylor.Data
 
         public void PopulateEvents()
         {
-            // add event seed data here with the above add method
-            // then call this method at the top of Program.cs
+            var event1 = new Event()
+            {
+                Date = new DateTime(1877, 8, 17),
+                Location = "Bonita, Arizona",
+                Description = "Billy the Kid's first kill."
+            };
+
+            var event2 = new Event()
+            {
+                Date = new DateTime(1796, 6, 20),
+                Location = "Vienna, Austria",
+                Description = "The first day of summer when Ludwig Von Beethoven contracted typhus, which was the probable cause of his hearing loss."
+            };
+
+            var event3 = new Event()
+            {
+                Date = new DateTime(1815, 6, 18),
+                Location = "Waterloo, Netherlands",
+                Description = "Battle of Waterloo."
+            };
+
+            var event4 = new Event()
+            {
+                Date = new DateTime(1865, 4, 14),
+                Location = "Washington, D.C.",
+                Description = "Assassination of Abraham Lincoln."
+            };
+
+            var event5 = new Event()
+            {
+                Date = new DateTime(1430, 5, 23),
+                Location = "Compiegne, France",
+                Description = "Joan of Arch was captured to be put on trial."
+            };
+
+            _listOfEvents.Add(event1);
+            _listOfEvents.Add(event2);
+            _listOfEvents.Add(event3);
+            _listOfEvents.Add(event4);
+            _listOfEvents.Add(event5);
         }
 
         public Event GetRandomEvent()

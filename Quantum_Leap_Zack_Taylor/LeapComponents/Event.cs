@@ -9,6 +9,7 @@ namespace Quantum_Leap_Zack_Taylor.LeapComponents
         public Guid Id { get; set; }
         public string Location { get; set; }
         public DateTime Date { get; set; }
+        public string Description { get; set; }
         public bool IsPutRight { get; set; }
 
         public void PutEventRight()
@@ -19,8 +20,6 @@ namespace Quantum_Leap_Zack_Taylor.LeapComponents
         public Event()
         {
             Id = Guid.NewGuid();
-            Location = "New Location";
-            Date = new DateTime();
             IsPutRight = false;
         }
     }
